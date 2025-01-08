@@ -130,4 +130,7 @@ export async function getRateFromExchange(symbol: string): Promise<number> {
   throw Error(`Currency '${symbol}' is not supported.`);
 }
 
+// removing toplevel await
+(async () => {
 await ExchangeRate.get("usd");
+}) ();
